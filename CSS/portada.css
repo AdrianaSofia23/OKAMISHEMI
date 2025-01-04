@@ -80,7 +80,7 @@
     }
     
     #portada .img-container{
-        background-image: url("imagenes/avatar.jpeg");
+        background-image: url("../imagenes/avatar.jpeg");
         background-size: cover;
         background-position: center center;
         height: 400px;

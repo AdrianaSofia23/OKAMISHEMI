@@ -1,0 +1,165 @@
+#galeria .container{
+    padding: 100px 12px;
+    height: 100%;
+}
+
+
+#galeria .ilustraciones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas y filas */
+    height: 900px;
+    width: 450px;
+
+}
+
+#galeria .carta{
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    cursor: zoom-in; /* Hacer que el cursor cambie al pasar sobre una carta */
+    transition: transform 0.3s ease-in-out;
+}
+
+#galeria .carta:hover {
+  transform: scale(1.05); /* Efecto hover */
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal .modal-content {
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.modal.active {
+  display: flex;
+}
+
+
+.carta:first-child{
+    background-image: url("/imagenes/soledad4.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: url("/imagenes/soledad1.jpg");
+   
+}
+
+.carta:nth-child(3){
+    background-image: url("/imagenes/soledad5.jpg");
+}
+
+.carta:nth-child(4){
+    background-image: url("/imagenes/soledad2.jpg");
+}
+
+.carta:nth-child(5){
+    background-image: url("/imagenes/soledad6.jpg");
+}
+
+.carta:nth-child(6){
+    background-image: url("/imagenes/soledad3.jpg");
+}
+
+@media(min-width: 720px){
+    #galeria .container{
+        padding: 80px 118px;
+        height: 100%;
+    }
+    
+    
+    #galeria .ilustraciones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        column-gap: 40px; /* Espacio solo entre columnas */
+        row-gap: 10px; /* Espacio entre columnas y filas */
+    
+    }
+    
+    #galeria .carta{
+        background-repeat: none;
+        background-size: cover;
+        background-position: center center;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 15px;
+        border: 1px solid rgba(0,0,0,0.5);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        box-sizing: border-box;
+        height: 300px;
+        width: 300px;
+    }
+
+    .modal .modal-content {
+        background-size: cover;
+        background-position: center center;
+        height: 650px;
+        width: 650px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+    }
+
+}
+
+@media (min-width:1200px) {
+
+    #galeria .container{
+        padding: 70px 290px;
+        height: 100%;
+        margin-bottom: 600px;
+    }
+    
+    
+    #galeria .ilustraciones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        column-gap: 190px; /* Espacio solo entre columnas */
+        row-gap: 30px;/* Espacio entre columnas y filas */
+    
+    }
+    
+    #galeria .carta{
+        background-repeat: none;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 15px;
+        border: 1px solid rgba(0,0,0,0.5);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        box-sizing: border-box;
+        height: 500px;
+        width: 500px;
+    }
+
+    .modal .modal-content {
+        background-size: cover;
+        background-position: center center;
+        height: 650px;
+        width: 650px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+    }
+
+   
+}

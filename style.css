@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-size: 1.6em;
+    margin-bottom: 30px;
+}
+
+span{
+    font-size: 1.8em;
+}
+
+a{
+    font-size: 1.8m;
+}
+
+@font-face {
+    font-family: 'evanescent.ttf';
+    src: url('Fonts/evanescent.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-family: 'evanescent.ttf', sans-serif;
+}
+
+main{
+    background-color: #d3d3d3 ;    
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Altura máxima del main */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto; 
+}
+
+#sobre li:first-child {
+    display: none;
+}
+
+#sidebar{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    padding: 5px;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5), 
+        rgba(245, 240, 240, 0.5))
+        ,url(imagenes/fondo2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-right: 1px solid rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
+}
+
+#sidebar ul{
+    list-style: none;
+}
+
+
+.arriba > ul > li{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+
+    .logo {
+        margin: 0;
+        padding: 25px 30px;
+        color: black;
+        font-size: 1.3em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: relative; /* Necesario para posicionar el pseudoelemento */
+        display: inline-block;
+    }
+    
+    .logo::before {
+        content: ''; /* Pseudoelemento vacío para la línea */
+        position: absolute; /* Posición relativa al logo */
+        bottom: 20px; /* Alinea la línea en la parte inferior del logo */
+        left: 30px; /* La línea empieza al principio del texto */
+        width: 45px; /* Ajusta el tamaño de la línea según desees */
+        height: 3px; /* Grosor de la línea */
+        background-color: blue; /* Color de la línea */
+    }
+
+}
+      
+
+#sidebar ul li.active a{
+    color: rgb(7, 7, 7);
+
+    svg{
+        fill:black
+    }
+}
+
+#sidebar a, #sidebar .dropdown-btn {
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.dropdown-btn{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#sidebar svg{
+    flex-shrink: 0;
+    fill:black; 
+}
+
+#sidebar a span, #sidebar .dropdown-btn span{
+    flex-grow: 1;
+}
+
+
+#sidebar a:hover, #sidebar .dropdown-btn:hover{
+    background-color: aliceblue;
+}
+
+#sidebar .sub-menu{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+    font-size: 1.3em;
+
+    > div{
+        overflow: hidden;
+    }
+}
+
+#sidebar .sub-menu.show{
+    grid-template-rows: 1fr;
+}
+
+.dropdown-btn svg{
+    transition: 200ms ease;
+}
+.rotate svg:last-child{
+    rotate: 180deg;
+
+}
+
+#sidebar .sub-menu a{
+    padding-left: 2em;
+    font-size: 1.3em;
+}
+
+#toggle-btn{
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    svg{
+        transition: rotate 150ms ease;
+    }
+
+}
+
+#toggle-btn:hover{
+    background-color:aliceblue;
+}
+
+
+.abajo{
+    display: flex;
+    padding-top: 80px
+    
+} 
+
+.abajo .social-media {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 0.5px;
+    transition: 400ms ease-in-out;
+} 
+
+#sidebar.close .abajo .social-media {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-gap: 0.5px;
+    transition: 400ms ease-in-out;
+}
+
+
+
+
+/*celular*/
+@media(max-width: 800px){
+    main{
+        width: 100vw;
+    }
+    #sidebar{
+        height: 60px;
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid black;
+        padding: 0;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+
+        > ul{
+            padding: 0;
+            display: grid;
+            grid-auto-columns: 120px;
+            grid-auto-flow: column;
+            align-items: center;
+            overflow-x: scroll;
+        }
+
+        ul li{
+            height: 100%;
+        }
+
+        ul a, ul .dropdown-btn{
+            width: 60px;
+            height: 45px;
+            padding: 0;
+            border-radius: 0;
+            justify-content: center;
+    
+        }
+
+        ul li .sub-menu.show{
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            box-sizing: border-box;
+            height: 60px;
+            width: 100%;
+            background-color: rgb(168, 161, 161);
+            border-top: 1px solid black ;
+            display: flex;
+            justify-content: center;
+
+            >div{
+                overflow-x: auto;
+            }
+
+            li{
+                display: inline-flex;
+            }
+            a{
+                box-sizing: border-box;
+                padding: 1em;
+                width: auto;
+                justify-content: center;
+            }
+        }
+
+     
+
+        ul li span, .arriba, .dropdown-btn svg:last-child{
+            display: none;
+        }
+
+       
+    }
+
+    #sobre li:first-child {
+        display: block;
+    }
+
+    
+
+}
+
+/*escritorio*/
+@media (min-width:1200px) { 
+}

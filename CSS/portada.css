@@ -73,16 +73,15 @@
     #portada .texto {
         padding: 50px 40px;
         font-size: 1.2em;
-        width: 350px;
-        margin-right: 10px; /* Reduce el margen derecho */
-        margin-left: 10px;
-        margin-top: 0;
+        height: 400px;
+        width: 270px;
+        margin: 5px 90px;
     }
     
     #portada .img-container{
         background-size: cover;
         background-position: center center;
-        height: 400px;
+        height: 300px;
         width: 300px;
         margin: 5px 90px;
     }

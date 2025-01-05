@@ -89,15 +89,15 @@
     #portada .texto {
         padding: 30px 20px;
         font-size: 1.2em;
-        height: 350px;
-        width: 350px;
-        margin: 20px 40px;
+        height: 400px;
+        width: 270px;
+        margin: 5px 90px;
     }
     
     #portada .img-container{
         height: 400px;
-        width: 400px;
-        margin: 5px 35px;
+        width: 300px;
+        margin: 5px 90px;
     }
 }
 

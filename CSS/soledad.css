@@ -59,28 +59,28 @@
 
 
 .carta:first-child{
-    background-image: url("/imagenes/soledad4.jpg");
+    background-image: url("../imagenes/soledad4.jpg");
 }
 
 .carta:nth-child(2){
-    background-image: url("/imagenes/soledad1.jpg");
+    background-image: url("../imagenes/soledad1.jpg");
    
 }
 
 .carta:nth-child(3){
-    background-image: url("/imagenes/soledad5.jpg");
+    background-image: url("../imagenes/soledad5.jpg");
 }
 
 .carta:nth-child(4){
-    background-image: url("/imagenes/soledad2.jpg");
+    background-image: url("../imagenes/soledad2.jpg");
 }
 
 .carta:nth-child(5){
-    background-image: url("/imagenes/soledad6.jpg");
+    background-image: url("../imagenes/soledad6.jpg");
 }
 
 .carta:nth-child(6){
-    background-image: url("/imagenes/soledad3.jpg");
+    background-image: url("../imagenes/soledad3.jpg");
 }
 
 @media(min-width: 720px){
@@ -128,7 +128,7 @@
     #galeria .container{
         padding: 70px 290px;
         height: 100%;
-        margin-bottom: 600px;
+        margin-bottom: 200px;
     }
     
     

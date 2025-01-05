@@ -59,36 +59,36 @@
 
 
 .carta:first-child{
-    background-image: url("/imagenes/avatar4.jpg");
+    background-image: url("../imagenes/avatar4.jpg");
 }
 
 .carta:nth-child(2){
-    background-image: url("/imagenes/avatar6.jpg");
+    background-image: url("../imagenes/avatar6.jpg");
    
 }
 
 .carta:nth-child(3){
-    background-image: url("/imagenes/avatar8.jpg");
+    background-image: url("../imagenes/avatar8.jpg");
 }
 
 .carta:nth-child(4){
-    background-image: url("/imagenes/avatar3.jpg");
+    background-image: url("../imagenes/avatar3.jpg");
 }
 
 .carta:nth-child(5){
-    background-image: url("/imagenes/avatar2.png");
+    background-image: url("../imagenes/avatar2.png");
 }
 
 .carta:nth-child(6){
-    background-image: url("/imagenes/avatar5.jpg");
+    background-image: url("../imagenes/avatar5.jpg");
 }
 
 .carta:nth-child(7){
-    background-image: url("/imagenes/avatar1.jpg");
+    background-image: url("../imagenes/avatar1.jpg");
 }
 
 .carta:nth-child(8){
-    background-image: url("/imagenes/avatar7.jpg");
+    background-image: url("../imagenes/avatar7.jpg");
 }
 
 @media(min-width: 720px){
@@ -137,7 +137,7 @@
     #galeria .container{
         padding: 70px 290px;
         height: 100%;
-        margin-bottom: 1150px;
+        margin-bottom: 150px;
     }
     
     

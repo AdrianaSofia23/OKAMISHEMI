@@ -27,7 +27,7 @@
 }
 
 #portada .img-container {
-    background-image: url("/imagenes/libros2.jpg");
+    background-image: url("../imagenes/libros2.jpg");
     background-size: cover;
     background-position: center center;
     height: 500px;
@@ -94,7 +94,6 @@
     }
     
     #portada .img-container{
-        background-image: url("/imagenes/libros2.jpg");
         background-size: cover;
         background-position: center center;
         height: 400px;
@@ -130,7 +129,6 @@
     }
     
     #portada .img-container {
-        background-image: url("/imagenes/libros2.jpg");
         background-size: cover;
         background-position: center center;
         height: 650px;

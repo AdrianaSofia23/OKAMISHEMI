@@ -73,7 +73,7 @@
     #portada h2{
         margin-left: 0px;
         margin-top: 50px;
-        font-size: 3.5em;
+        font-size: 3em;
         justify-self: center;
     }
     #portada .container{
@@ -88,9 +88,9 @@
     #portada .texto {
         padding: 30px 20px;
         font-size: 1.2em;
-        height: 350px;
-        width: 350px;
-        margin: 20px 40px;
+        height: 400px;
+        width: 270px;
+        margin: 5px 90px;
     }
     
     #portada .img-container{

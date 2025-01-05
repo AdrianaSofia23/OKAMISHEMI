@@ -1,6 +1,7 @@
 
 #galeria .container{
-    padding: 100px 10px;
+    padding: 0;
+    margin-top: 10px;
 }
 
 
@@ -25,8 +26,8 @@
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     cursor: zoom-in; /* Hacer que el cursor cambie al pasar sobre una carta */
     transition: transform 0.3s ease-in-out;
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
 }
 
 #galeria .carta:hover {

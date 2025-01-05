@@ -73,9 +73,8 @@
     #portada .texto {
         padding: 50px 40px;
         font-size: 1.2em;
-        height: 400px;
         width: 270px;
-        margin: 5px 90px;
+        margin: 0px 90px;
     }
     
     #portada .img-container{
@@ -83,7 +82,8 @@
         background-position: center center;
         height: 300px;
         width: 300px;
-        margin: 5px 90px;
+        margin-left: 50px;
+        margin-top: 50px;
     }
 }
 
